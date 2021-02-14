@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleFormSubmit = function(event){
     event.preventDefault();
 
-    console.log(event.target.year.value);
+    console.log(event.target.genre.value);
 
     const newListItem = createListItem(event.target);
     const musicList = document.querySelector('#music-list');
@@ -33,9 +33,15 @@ const createListItem = function (form) {
     album.textContent = form.album.value;
     newListItem.appendChild(album);
 
-    const year= document.createElement('p');
+    const year = document.createElement('p');
     year.textContent = form.year.value;
     newListItem.appendChild(year);
+    
+    const genre = document.createElement('h5');
+    genre.textContent = form.genre.value;
+        // for(i = 0; i < genre.length; i++) {
+        //     if (genre[i].checked)
+    newListItem.appendChild(genre);
 
     return newListItem;
 }

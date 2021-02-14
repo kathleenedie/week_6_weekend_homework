@@ -14,9 +14,8 @@
        <h3>A place for all your Caledonian music</h3>
     </header> 
 
-   <h2>Collection Entry</h2>
-
    <div class="form-set">
+    <h2>Collection Entry</h2>
    <form id="input-form">
     <label for="artist">Artist:</label><br>
     <input type="text" id="artist" name="artist"><br>
@@ -25,6 +24,13 @@
     <label for="year">Release Year:</label><br>
     <input type="number" id="year" name="year"><br>
 
+    <input type="radio" id="indie" name="genre" value="Indie">
+    <label for="indie">Indie</label><br>
+    <input type="radio" id="blue-eye-soul" name="genre" value="Blue Eyed Soul">
+    <label for="blue-eye-soul">Blue Eyed Soul</label><br>
+    <input type="radio" id="folk" name="genre" value="Folk">
+    <label for="folk">Folk</label><br>
+
     <input id="submit-button" type="submit" value="Save"/> 
 
   </form>
@@ -32,8 +38,14 @@
   <button id="delete-all">Delete All</button>
 
   </div>
+  
+  <div id='collection-display'>
 
    <h2>Music Collection</h2>
    <ul id="music-list"></ul>
+
+  </div>
+  <footer>
+      <h1>Gie it laldie</h1></footer>
 </body>
 </html>

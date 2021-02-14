@@ -1,10 +1,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(199, 192, 181);
+    display: grid;
+    grid-template-columns: 1fr 1fr 200px;
+    grid-template-rows: 100px 370px 1fr 50px;
+    gap: 10px;
 }
 
 header {
     color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 h2 {
@@ -20,19 +26,47 @@ h4 {
     color: rgb(68, 59, 45);
 }
 
+h5 {
+    font-style: italic;
+}
+
 .form-set {
     background-color: rgb(233, 229, 222);
-    padding: 30px;
+    padding: 10px;
+
 }
 
 #submit-button, #delete-all {
     margin: 10px 10px 0px 0px;
 }
 
-#music-list {
+#collection-display {
     color: rgb(68, 59, 45);
     background-color: rgb(233, 229, 222);
     list-style-type: none;
-    margin: 20px;
     padding: 10px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
+
+#music-list {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+
+ul > li {
+    padding: 5px 5px 5px 5px;
+    border: rgb(39, 39, 37);
+    border-width: 3px;
+}
+
+footer {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;   
+}
+
