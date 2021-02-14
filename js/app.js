@@ -9,22 +9,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   })
 
-  const handleFormSubmit = function(event){
+const handleFormSubmit = function(event){
     event.preventDefault();
+
     console.log(event.target.year.value);
+
+    const newListItem = createListItem(event.target);
+    const musicList = document.querySelector('#music-list');
+    musicList.appendChild(newListItem);
+
+    event.target.reset();
+}
+
+const createListItem = function (form) {
     const newListItem = document.createElement('li');
-    newListItem.textContent = `${event.target.artist.value} ${event.target.album.value} ${event.target.year.value}`;
-    
-    const list = document.querySelector('ul');
-    list.appendChild(newListItem);
-  
-    document.getElementById('input-form').reset();
+    newListItem.classList.add('#music-list-entry');
 
-  }
+    const artist = document.createElement('h4');
+    artist.textContent = form.artist.value;
+    newListItem.appendChild(artist);
 
-  const handleDeleteAll = function(event){
+    const album = document.createElement('p');
+    album.textContent = form.album.value;
+    newListItem.appendChild(album);
+
+    const year= document.createElement('p');
+    year.textContent = form.year.value;
+    newListItem.appendChild(year);
+
+    return newListItem;
+}
+
+const handleDeleteAll = function(event){
     event.preventDefault();
-  
+
     const list = document.getElementById('music-list').remove();
-    
-  }
+}

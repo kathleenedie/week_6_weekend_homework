@@ -16,6 +16,10 @@ h3 {
     padding-left: 60px;
 }
 
+h4 {
+    color: rgb(68, 59, 45);
+}
+
 .form-set {
     background-color: rgb(233, 229, 222);
     padding: 30px;
@@ -28,4 +32,7 @@ h3 {
 #music-list {
     color: rgb(68, 59, 45);
     background-color: rgb(233, 229, 222);
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px;
 }
